@@ -1,5 +1,7 @@
 package marczakx.league.web;
 
+import java.io.IOException;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,7 +33,10 @@ public class LeagueController {
 	public Iterable<LeagueTableEntry> league() {
 		return leagueService.listLeague();
 	}
-
+	@GetMapping("/")
+	public void redirectToSwagger(HttpServletResponse response) throws IOException {
+		response.sendRedirect("/swagger-ui.html");
+	}
 	@GetMapping("/match")
 	public Iterable<Match> match() {
 		return matchRepository.findAll();
