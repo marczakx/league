@@ -38,8 +38,8 @@ public class LeagueCreator {
 	}
 
 	private void sort() {
-		league.sort((o1, o2) -> Integer.compare(o2.getPoints(), o1.getPoints()));
 		league.sort((o1, o2) -> Integer.compare(o2.getScoredGoals(), o1.getScoredGoals()));
+		league.sort((o1, o2) -> Integer.compare(o2.getPoints(), o1.getPoints()));
 	}
 
 	private void addToLeague(Team team) {
@@ -151,7 +151,7 @@ public class LeagueCreator {
 
 	private LeagueTableEntry getLeagueTableEntry(Team team) {
 		return league.stream().filter(l -> l.getTeam() == team).findAny().get();
-		  }
+	}
 
 	public static Builder builder() {
 		return new Builder();
