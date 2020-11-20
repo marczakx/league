@@ -33,7 +33,7 @@ public class LeagueController {
 	public Iterable<LeagueTableEntry> league() {
 		return leagueService.listLeague();
 	}
-	@GetMapping("/")
+	@GetMapping("/doc")
 	public void redirectToSwagger(HttpServletResponse response) throws IOException {
 		response.sendRedirect("/swagger-ui.html");
 	}
