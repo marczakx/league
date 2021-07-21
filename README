@@ -1,2 +1,26 @@
-Foosball league
 
+Foosball league backend   (Spring Boot, Hibernate, REST)
+
+The application enables:
+- adding teams to the league,
+- adding match results,
+- displaying the table.
+
+The table contains the number of games played, the number of points, the number of won and lost sets.
+
+A match consists of two or three sets.
+If there is a 1-1 draw after two sets, the third set is played.
+The first two sets are played to the score 10 and the third set is played to the score 5.
+
+The winning team scores 1 point.
+
+The application creates a table based on the saved results.
+The order of the teams is determined based on the points scored. 
+In the case of the same number of points, 
+higher in the table is team who scored more goals.
+
+The application was launched:
+ 
+rocky-gorge-50247.herokuapp.com/tab (jsp frontend)
+ 
+tranquil-badlands-56008.herokuapp.com (angular frontend)
